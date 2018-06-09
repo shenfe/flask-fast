@@ -1,5 +1,5 @@
 DEV_HOST = '0.0.0.0'
-DEV_PORT = 5001
+DEV_PORT = 5000
 
 if __name__ == '__main__':
 
