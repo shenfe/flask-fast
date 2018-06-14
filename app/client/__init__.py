@@ -11,8 +11,10 @@ client_bp = Blueprint('client_app', __name__,
                       template_folder='./dist',
                       )
 
+from app import cas
 
 @client_bp.route('/')
 def index():
+    print('username', cas.username)  # https://github.com/cameronbwhite/Flask-CAS#example
     return render_template('index.html')
 
