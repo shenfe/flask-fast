@@ -35,4 +35,4 @@ else
     echo ">>> Development"
 fi
 
-python ./run.py & . ./post_run
+python ./run.py & . ./post_run.sh

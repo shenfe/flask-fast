@@ -19,5 +19,8 @@ from .normal import normal_route
 normal_route(api_bp)
 
 from flask_restplus import Api
+api = Api(api_bp, doc='/doc/')
+
 from .rest import rest_route
-rest_route(Api(api_bp, doc='/doc/'))
+rest_route(api)
+
