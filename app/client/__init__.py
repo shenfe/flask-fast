@@ -6,8 +6,8 @@ from flask_cas import login_required
 
 
 client_bp = Blueprint('client_app', __name__,
-                      url_prefix='',
-                      static_url_path='',  # add a url path if needed, such as `/static`
+                      url_prefix='',  # Add your sub-directory path if needed, such as `/my-app`
+                      static_url_path='',  # Add a url path if needed, such as `/static`
                       static_folder='./dist',
                       template_folder='./dist',
                       )
