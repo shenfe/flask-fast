@@ -13,6 +13,13 @@ client_bp = Blueprint('client_app', __name__,
                       )
 
 from app import cas
+from app.config import current_mode
+
+
+if current_mode() == 'Development':
+    # Do not use CAS in development mode
+    login_required = lambda x: x
+
 
 @client_bp.route('/')
 @login_required
