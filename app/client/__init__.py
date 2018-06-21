@@ -2,6 +2,7 @@
 
 import os
 from flask import Blueprint, render_template
+from flask_cas import login_required
 
 
 client_bp = Blueprint('client_app', __name__,
@@ -14,6 +15,7 @@ client_bp = Blueprint('client_app', __name__,
 from app import cas
 
 @client_bp.route('/')
+@login_required
 def index():
     print('username', cas.username)  # https://github.com/cameronbwhite/Flask-CAS#example
     return render_template('index.html')
