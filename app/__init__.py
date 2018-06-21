@@ -16,7 +16,7 @@ app.logger.info('>>> {}'.format(app_mode))
 app.config['CAS_SERVER'] = 'https://sso.your-server.com/'
 app.config['CAS_LOGIN_ROUTE'] = '/cas/login'
 app.config['CAS_AFTER_LOGIN'] = '/'
-cas = CAS(app, '/cas')
+cas = CAS(app, '/cas')  # Add your sub-directory path if needed, such as `/my-app/cas`
 
 from .api import api_bp
 from .client import client_bp
