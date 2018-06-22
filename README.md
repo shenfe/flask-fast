@@ -44,9 +44,11 @@
     $ pip install --user pipenv
     ```
 
-* 安装Python依赖，使用**pipenv**或pip命令（在项目根目录下）
+* 安装Python依赖，建议使用**pipenv**命令（在项目根目录下）
 
-    `$ pipenv install`或`pip install -r requirements.txt`
+    ```
+    $ pipenv install
+    ```
 
 ## 服务
 
@@ -94,10 +96,10 @@ $ sh ./run.sh -d
     $ sh ./run.sh
     ```
 
-    或使用Gunicorn运行应用：
+    或使用Gunicorn运行应用（注意端口变化）：
 
     ```
-    $ gunicorn myflaskapp:app
+    $ gunicorn app:app
     ```
 
 ## 开发
