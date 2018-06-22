@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-click = "*"
 gunicorn = "*"
 Flask = "*"
 flask-restplus = "*"
