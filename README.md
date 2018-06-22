@@ -140,5 +140,4 @@ $ pipenv run pytest
 
 * [x] [Flask-CAS](https://github.com/cameronbwhite/Flask-CAS)
 * [x] [Flask-CORS](https://github.com/corydolphin/flask-cors)
-* [ ] [Flask-SQLAlchemy](https://github.com/mitsuhiko/flask-sqlalchemy) [Quickstart](http://www.pythondoc.com/flask-sqlalchemy/quickstart.html)
 * [ ] Celery
