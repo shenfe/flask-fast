@@ -94,6 +94,12 @@ $ sh ./run.sh -d
     $ sh ./run.sh
     ```
 
+    或使用Gunicorn运行应用：
+
+    ```
+    $ gunicorn myflaskapp:app
+    ```
+
 ## 开发
 
 ### 接口
