@@ -8,10 +8,6 @@ def client():
     app.config['TESTING'] = True
     return app.test_client()
 
-def test_api(client):
-    resp = client.get('/api/')
-    assert resp.status_code == 200
-
 def test_resource_one(client):
     resp = client.get('/api/resource/one')
     assert resp.status_code == 200
