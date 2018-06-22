@@ -57,12 +57,6 @@
 项目根目录，执行
 
 ```
-$ python -m app serve_api
-```
-
-或执行
-
-```
 $ python run.py
 ```
 
@@ -84,7 +78,6 @@ $ sh ./run.sh -d
 
     ```
     $ export FLASK_CONFIG="Production"
-    $ export SECRET_KEY="your_secret_key"
     ```
 
 * 运行Flask应用：
