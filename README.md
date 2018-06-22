@@ -94,12 +94,6 @@ $ sh ./run.sh -d
     $ sh ./run.sh
     ```
 
-    或使用**Gunicorn** serve整个应用：
-
-    ```
-    $ gunicorn app:app
-    ```
-
 ## 开发
 
 ### 接口
