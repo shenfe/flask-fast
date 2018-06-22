@@ -66,6 +66,12 @@ $ python -m app serve_api
 $ python run.py
 ```
 
+或执行
+
+```
+$ sh ./run.sh -d
+```
+
 这会在`localhost:5000`启动Flask开发服务器，并在`/api`端点响应接口请求。
 
 ### 生产环境服务器（Production Server）
@@ -89,6 +95,12 @@ $ python run.py
     $ python run.py
     ```
 
+    或执行
+
+    ```
+    $ sh ./run.sh
+    ```
+
     或使用**Gunicorn** serve整个应用：
 
     ```
@@ -103,7 +115,7 @@ $ python run.py
 
 普通接口：[`app/api/normal.py`](./app/api/normal.py)
 
-RESTful接口：[`app/api/rest/resource.py`](./app/api/rest/resource.py)
+RESTful接口：[`app/api/rest`](./app/api/rest/res_sample.py)
 
 RESTful接口**自动文档化**，在API路径下的`doc`路径，如http://localhost:5000/api/doc/。
 
