@@ -40,13 +40,13 @@
 
 * 创建一个[virtual enviroment](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies)（推荐）
 
-    ```
+    ```sh
     $ pip install --user pipenv
     ```
 
 * 安装Python依赖，建议使用**pipenv**命令（在项目根目录下）
 
-    ```
+    ```sh
     $ pipenv install
     ```
 
@@ -58,13 +58,13 @@
 
 项目根目录，执行
 
-```
+```sh
 $ python run.py
 ```
 
 或执行
 
-```
+```sh
 $ sh ./run.sh -d
 ```
 
@@ -78,7 +78,7 @@ $ sh ./run.sh -d
 
     执行
 
-    ```
+    ```sh
     $ export FLASK_CONFIG="Production"
     ```
 
@@ -86,19 +86,19 @@ $ sh ./run.sh -d
 
     执行
 
-    ```
+    ```sh
     $ python run.py
     ```
 
     或执行
 
-    ```
+    ```sh
     $ sh ./run.sh
     ```
 
     或使用Gunicorn运行应用（注意端口变化）：
 
-    ```
+    ```sh
     $ gunicorn app:app
     ```
 
@@ -128,13 +128,13 @@ RESTful接口**自动文档化**，在API路径下的`doc`路径，如http://loc
 
 确保dev依赖：
 
-```
+```sh
 $ pipenv install --dev
 ```
 
 运行pytest：
 
-```
+```sh
 $ pipenv run pytest
 ```
 
