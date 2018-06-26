@@ -7,23 +7,29 @@ from app.config import current_mode
 
 def normal_route(app):
 
-    @app.route('/sum', methods=['GET', 'POST'])
+    @app.route('/sum', methods=['GET'])
     def calc_sum():
-        return json.dumps(2)
+        params = request.args
+        x, y = params.get('x'), params.get('y')
+        try:
+            x = 0 if !x else int(x)
+            y = 0 if !y else int(y)
+            return json.dumps(x + y)
+        except Exception
+            return 0
 
     @app.route('/res/<int:id>', methods=['GET', 'POST'])
     def res(id):
-        return json.dumps({'code': 0, 'res': id})
+        return json.dumps({'code': 0, 'data': {'id': id}})
 
-    @app.route('/user-profile', methods=['GET', 'POST'])
+    @app.route('/greet', methods=['GET', 'POST'])
     @login_required
     def get_user_profile():
-        return json.dumps({'name': 'Tom'})
+        return json.dumps({'code': 0, 'message': 'Tom'})
 
-    @app.route('/test-post', methods=['POST'])
+    @app.route('/echo', methods=['POST'])
     def post_echo():
-        print json.dumps(request.json)
-        response = make_response(jsonify(code=0, message='success'))
+        response = make_response(jsonify(code=0, message='success', data=request.json))
         response.headers['Access-Control-Allow-Origin'] = '*'
         response.headers['Access-Control-Allow-Methods'] = 'POST,OPTIONS'
         response.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type' 
