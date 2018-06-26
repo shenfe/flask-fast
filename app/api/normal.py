@@ -12,8 +12,8 @@ def normal_route(app):
         params = request.args
         x, y = params.get('x'), params.get('y')
         try:
-            x = 0 if !x else int(x)
-            y = 0 if !y else int(y)
+            x = 0 if not x else int(x)
+            y = 0 if not y else int(y)
             return json.dumps(x + y)
         except Exception
             return 0
