@@ -30,9 +30,6 @@ cd ${cwd}
 
 if [ "$MODE" != "Development" ]; then
     export FLASK_CONFIG="Production"
-    echo ">>> Production"
-else
-    echo ">>> Development"
 fi
 
 python ./run.py & . ./post_run.sh
