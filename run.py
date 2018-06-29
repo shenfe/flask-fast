@@ -6,6 +6,8 @@ if __name__ == '__main__':
     import os
     from app import app, app_mode
 
+    extra_files = []
+
     if app_mode == 'Development':
         extra_dirs = ['app/client/mock',]
         extra_files = extra_dirs[:]
