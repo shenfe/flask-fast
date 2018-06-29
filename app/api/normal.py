@@ -14,7 +14,7 @@ def normal_route(app):
         try:
             x = 0 if not x else int(x)
             y = 0 if not y else int(y)
-            return json.dumps(x + y)
+            return x + y
         except Exception
             return 0
 
@@ -25,7 +25,7 @@ def normal_route(app):
     @app.route('/greet', methods=['GET', 'POST'])
     @login_required
     def get_user_profile():
-        return json.dumps({'code': 0, 'message': 'Tom'})
+        return jsonify(code=0, message='Hi')
 
     @app.route('/echo', methods=['POST'])
     def post_echo():
