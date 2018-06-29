@@ -10,7 +10,7 @@ from .config import current_mode
 app = Flask(__name__)
 app_mode = current_mode()
 app.config.from_object('app.config.{}'.format(app_mode))
-app.logger.info('>>> {}'.format(app_mode))
+app.logger.info('>>> %s' % app_mode)
 
 # CAS Config
 app.config['CAS_SERVER'] = 'https://sso.your-server.com/'
