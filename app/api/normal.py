@@ -15,7 +15,7 @@ def normal_route(app):
             x = 0 if not x else int(x)
             y = 0 if not y else int(y)
             return x + y
-        except Exception
+        except Exception:
             return 0
 
     @app.route('/res/<int:id>', methods=['GET', 'POST'])
